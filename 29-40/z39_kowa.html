@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+                h1{
+                        color:green;
+                        margin-left: 0%;
+                }
+                .czerwony{
+                        color:red;
+                        margin-left:3%;
+                }
+                .niebieski{
+                        color:blue;
+                        margin-left:3%;
+                }
+        </style>
+</head>
+<body>
+        <h1>Menu</h1>
+       <h2 class="czerwony">1-czerwony</h2>
+       <h2 class="niebieski">2-niebieski</h2>
+        <input type="text" id="input"> 
+        <button  onclick="submit(event)">sprawdź</button>
+
+        <script>
+                
+               
+              
+
+                function submit(event)
+                {
+                        var input = document.getElementById("input").value;
+
+                        if(input == '1' || input.toLowerCase() == 'czerwony'){
+                                document.write('wybrales kolor czerwony'.fontsize(7).fontcolor("#FF0000"));}
+                        else if(input == '2' || input.toLowerCase() == 'niebieski'){
+                                document.write('wybrales kolor niebieski'.fontsize(1).fontcolor("#0000FF"));}
+                }
+
+        </script>
+</body>
+</html>

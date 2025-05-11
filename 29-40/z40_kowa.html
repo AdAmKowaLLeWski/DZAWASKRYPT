@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<htlml>
+        <head>
+
+                <style>
+                        div{
+                                font-size:40px;
+                        }
+                </style>
+        </head>
+        <body>
+                <h1> PROSTE DZIALANIA</h1>
+                <br>
+                <h3>Adam Kowalewski 3K</h3>
+                podaj pierwsza liczbe <input type="text" placeholder="liczba1" id="jeden">
+                <br>
+                podaj druga liczbe <input type="text" placeholder="liczba2" id="dwa">
+                <br>
+                <button onclick="dzielenie_kow()">DZIELENIE</button>
+                <br>
+                <button onclick="dodawanie_kow()">DODAWANIE</button>
+                <br>
+                <button onclick="mnozenie_kow()">MNOZENIE</button>
+                <br>
+                <button onclick="odejmowanie_kow()">ODEJMOWANIE</button>
+                <div id="divk">
+                        <p></p>
+                </div>
+                <script>
+                       
+                        function dzielenie_kow()
+                        {
+                                const divv = document.getElementById("divk");
+                                var liczba1 = parseFloat(document.getElementById("jeden").value);
+                                var liczba2 = parseFloat(document.getElementById("dwa").value);
+
+                                if(isNaN(liczba1/liczba2))
+                                             {
+                                                alert("prosze wypelnic oba pola (tylko liczby,druga liczba nie moze wynosic 0)");
+                                             }
+                                else{
+                                        if(liczba2 != 0 )
+                                        {
+                                           
+                                          
+                                             divv.innerHTML="wynik dzialania wynosi:"+liczba1/liczba2;
+                                        }
+                                 
+                                }
+                        }
+                        function dodawanie_kow(){
+                                const divv = document.getElementById("divk");
+                                var liczba1 = parseFloat(document.getElementById("jeden").value);
+                                var liczba2 = parseFloat(document.getElementById("dwa").value);
+                                var suma = liczba1 + liczba2;
+                                if(isNaN(liczba1) || isNaN(liczba2))
+                                             {
+                                                alert("prosze wypelnic oba pola (tylko liczby)");
+                                             }
+                                             else{
+                                                divv.innerHTML="wynik dodawania wynosi: "+ suma;
+                                             }
+                        }
+                        function mnozenie_kow()
+                        {
+                                const divv = document.getElementById("divk");
+                                var liczba1 = parseFloat(document.getElementById("jeden").value);
+                                var liczba2 = parseFloat(document.getElementById("dwa").value);
+                                var wynik = liczba1 * liczba2;
+                                if(isNaN(liczba1) || isNaN(liczba2))
+                                             {
+                                                alert("prosze wypelnic oba pola (tylko liczby)");
+                                             }
+                                             else{
+                                                divv.innerHTML="wynik dodawania wynosi: "+ wynik;
+                                             }
+                        }
+                        function odejmowanie_kow()
+                        {
+                                const divv = document.getElementById("divk");
+                                var liczba1 = parseFloat(document.getElementById("jeden").value);
+                                var liczba2 = parseFloat(document.getElementById("dwa").value);
+                                var wynik = liczba1 - liczba2;
+                                if(isNaN(liczba1) || isNaN(liczba2))
+                                             {
+                                                alert("prosze wypelnic oba pola (tylko liczby)");
+                                             }
+                                             else{
+                                                divv.innerHTML="wynik odejmowania wynosi: "+ wynik;
+                        }
+                }
+
+                </script>
+        </body>
+</htlml>
